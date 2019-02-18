@@ -17,7 +17,7 @@ function func_install() {
 	if [ ! -d ${targetdir} ];then
 		mkdir ${targetdir}
 	fi
-	mv ${param1_source} ${param2_target} && chmod 777 ${param2_target}
+	sudo mv ${param1_source} ${param2_target} && chmod 777 ${param2_target}
 }
 
 case $param1_source in
