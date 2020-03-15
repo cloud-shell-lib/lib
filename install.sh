@@ -15,6 +15,7 @@ function func_install() {
 	if [ ! -d ${targetdir} ];then
 		mkdir ${targetdir}
 	fi
+	printf "> 请输入本机用户密码以安装脚本 "
 	sudo mv ${param1_source} ${param2_target} && chmod 777 ${param2_target}
 }
 
