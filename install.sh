@@ -1,7 +1,5 @@
 #!/bin/bash
 
-# install 'downloads/sdfsdf.sh' -local
-
 param1_source=$1
 param2_target=$2
 

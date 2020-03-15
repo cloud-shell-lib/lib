@@ -14,7 +14,7 @@ function func_download() {
 		''|'*') param3_client_name=${param1_repo_name} ;;
 		*) ;;
 	esac
-	source_url=https://cdn.jsdelivr.net/gh/xaoxuu/${param1_repo_name}@${param2_version}/${param3_client_name}
+	source_url=https://raw.githubusercontent.com/xaoxuu/${param1_repo_name}/${param2_version}/${param3_client_name}
 	case $param4_cache_path in
 		'') param4_cache_path=$HOME/Downloads/ ;;
 		*) ;;
