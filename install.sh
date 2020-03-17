@@ -7,7 +7,7 @@ P1=$1
 P2=$2
 
 function func_install() {
-	src=$1
+	src=$P1
 	target_full_path=''
 	case $P2 in
 		''|'*')
