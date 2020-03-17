@@ -1,34 +1,34 @@
 #!/bin/bash
 
-param1_repo_name=$1
-param2_version=$2
-param3_client_name=$3
-param4_cache_path=$4
+REPO_NAME=$1
+REPO_VERSION=$2
+CLI_NAME=$3
+CACHE_PATH=$4
 
 function func_download() {
-	case $param2_version in
-		''|'*') param2_version='master' ;;
+	case $REPO_VERSION in
+		''|'*') REPO_VERSION='master' ;;
 		*) ;;
 	esac
-	case $param3_client_name in
-		''|'*') param3_client_name=${param1_repo_name} ;;
+	case $CLI_NAME in
+		''|'*') CLI_NAME=${REPO_NAME} ;;
 		*) ;;
 	esac
-	source_url=https://cdn.jsdelivr.net/gh/xaoxuu/${param1_repo_name}@${param2_version}/${param3_client_name}
-	case $param4_cache_path in
-		'') param4_cache_path=$HOME/Downloads/ ;;
+	source_url=https://cdn.jsdelivr.net/gh/xaoxuu/${REPO_NAME}@${REPO_VERSION}/${CLI_NAME}
+	case $CACHE_PATH in
+		'') CACHE_PATH=$HOME/Downloads/ ;;
 		*) ;;
 	esac
-	if [ ! -d ${param4_cache_path} ];then
-		mkdir ${param4_cache_path}
+	if [ ! -d ${CACHE_PATH} ];then
+		mkdir ${CACHE_PATH}
 	fi
 	echo "> 正在下载: ${source_url}"
-	curl -f -o ${param4_cache_path}/${param3_client_name} ${source_url} -# &&
-	echo "> 下载成功，存放路径为: ${param4_cache_path%/*}/${param3_client_name}"
+	curl -f -o ${CACHE_PATH}/${CLI_NAME} ${source_url} -# &&
+	echo "> 下载成功: ${CACHE_PATH%/*}/${CLI_NAME}"
 }
 
 
-case $param1_repo_name in
+case $REPO_NAME in
 	'') printf "\n> \033[31m缺少参数！\033[0m 参数：[GitHub仓库名] [分支] [要下载的文件]\n\n" ;;
 	*) func_download ;;
 esac
