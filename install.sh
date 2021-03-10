@@ -8,20 +8,20 @@ P2=$2
 
 function func_install() {
 	src=$P1
+	target_dir='/usr/local/bin'
 	target_full_path=''
 	case $P2 in
 		''|'*')
-			target_full_path="/usr/local/bin/${src##*/}"
+			target_full_path="${target_dir}/${src##*/}"
 		;;
 		*)
-			target_full_path="/usr/local/bin/${P2}"
+			target_full_path="${target_dir}/${P2}"
 		;;
 	esac
-	targetdir=${target_full_path%/*}
-	if [ ! -d ${targetdir} ];then
-		mkdir ${targetdir}
+	printf "> 请输入本机密码以安装脚本\n"
+	if [ ! -d ${target_dir} ];then
+		sudo mkdir ${target_dir}
 	fi
-	printf "> 请输入本机用户密码以安装脚本 "
 	sudo mv ${src} ${target_full_path} && chmod 777 ${target_full_path}
 }
 
