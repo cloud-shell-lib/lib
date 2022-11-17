@@ -1,6 +1,10 @@
-# lib.sh
+# cloud-shell-lib
 
 这是一个公共库，封装了下载和安装脚本的方法。
+
+```
+curl -s https://sh.xaox.cc/install | bash -s
+```
 
 ## 如何使用
 
@@ -8,21 +12,20 @@
 
 ```sh
 # lib
-lib=https://cdn.jsdelivr.net/gh/xaoxuu/lib.sh@2.0
+lib=https://sh.xaox.cc/lib/v3
 ```
 
 ### 下载脚本
 
 | 参数 | 含义 |
 | :-- | :-- |
-| ${USER} | GitHub 用户名 |
-| ${REPO} | 此用户名下的仓库名 |
-| ${VERSION} | 此仓库的版本 |
+| ${REPO} | xaoxuu名下的仓库名 |
+| ${BRANCHE} | 此仓库的分支 |
 | ${TARGET} | 要下载的文件 |
 | ${CACHE_PATH} | 保存路径（可选，默认为Downloads） |
 
 ```sh
-curl -s ${lib}/download.sh | sh -s ${USER} ${REPO} ${VERSION} ${TARGET}
+curl -s ${lib}/download.sh | sh -s ${REPO} ${BRANCHE} ${TARGET}
 ```
 
 > 除了脚本，此方法也可以下载其它文件。

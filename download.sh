@@ -1,21 +1,16 @@
 #!/bin/bash
 
-USER=$1
-REPO_NAME=$2
-REPO_VERSION=$3
-CLI_NAME=$4
-CACHE_PATH=$5
+REPO_NAME=$1
+REPO_BRANCHE=$2
+CLI_NAME=$3
+CACHE_PATH=$4
 
 function func_download() {
-	case $REPO_VERSION in
-		''|'*') REPO_VERSION='master' ;;
-		*) ;;
-	esac
 	case $CLI_NAME in
 		''|'*') CLI_NAME=${REPO_NAME} ;;
 		*) ;;
 	esac
-	source_url=https://cdn.jsdelivr.net/gh/${USER}/${REPO_NAME}@${REPO_VERSION}/${CLI_NAME}
+	source_url=https://sh.xaox.cc/run/${REPO_NAME}/${REPO_BRANCHE}/${CLI_NAME}
 	case $CACHE_PATH in
 		'') CACHE_PATH=$HOME/Downloads/ ;;
 		*) ;;
