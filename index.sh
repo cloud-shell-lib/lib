@@ -29,14 +29,14 @@ function check_param() {
 			'')
 				clear
 				printf "可安装的脚本:\n"
-				printf "  \033[1m\033[32m%s\033[0m %s \t (docs: %s) \n" 'tag.sh' '' 'https://xaoxuu.com/wiki/tag.sh/'
-				printf "  \033[1m\033[32m%s\033[0m %s \t (docs: %s) \n" 'hexo.sh' '' 'https://xaoxuu.com/wiki/hexo.sh/'
-				printf "  \033[1m\033[32m%s\033[0m %s \t (docs: %s) \n" 'podspec.sh' '' 'https://xaoxuu.com/wiki/podspec.sh/'
-				printf "  \033[1m\033[32m%s\033[0m %s \t (docs: %s) \n" 'vim-cn.sh' '' 'https://xaoxuu.com/wiki/vim-cn.sh/'
+				printf "  \033[1m\033[32m%s\033[0m %s (docs: %s) \n" 'blog   ' '' 'https://xaoxuu.com/wiki/cloud-shell/blog/'
+				printf "  \033[1m\033[32m%s\033[0m %s (docs: %s) \n" 'vimcn  ' '' 'https://xaoxuu.com/wiki/cloud-shell/vimcn/'
+				printf "  \033[1m\033[32m%s\033[0m %s (docs: %s) \n" 'tag    ' '' 'https://xaoxuu.com/wiki/cloud-shell/tag/'
+				printf "  \033[1m\033[32m%s\033[0m %s (docs: %s) \n" 'podspec' '' 'https://xaoxuu.com/wiki/cloud-shell/podspec/'
 				printf "\n"
 				printf "默认安装最新版本，可以在脚本后面加上版本号安装指定版本或分支，用空格隔开。例如:\n"
-				printf "curl -s https://sh.xaox.cc/install | bash -s hexo.sh v2\n"
-				printf "\n\n"
+				printf "curl -s https://sh.xaox.cc/install | bash -s blog 3.0.0\n"
+				printf "\n"
 			;;
 			*) start ;;
 		esac

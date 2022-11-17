@@ -19,7 +19,7 @@ lib=https://sh.xaox.cc/lib/v3
 
 | 参数 | 含义 |
 | :-- | :-- |
-| ${REPO} | xaoxuu名下的仓库名 |
+| ${REPO} | cloud-shell-lib组织名下的仓库名 |
 | ${BRANCHE} | 此仓库的分支 |
 | ${TARGET} | 要下载的文件 |
 | ${CACHE_PATH} | 保存路径（可选，默认为Downloads） |
