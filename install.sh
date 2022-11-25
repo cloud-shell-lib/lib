@@ -18,7 +18,7 @@ install() {
 			target_full_path="${target_dir}/${P2}"
 		;;
 	esac
-	printf "> 请输入本机密码以安装脚本\n"
+	printf "> 请输入本机密码以安装脚本 "
 	if [ ! -d ${target_dir} ];then
 		sudo mkdir ${target_dir}
 	fi

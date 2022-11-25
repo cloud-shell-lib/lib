@@ -18,9 +18,9 @@ download() {
 	if [ ! -d ${CACHE_PATH} ];then
 		mkdir ${CACHE_PATH}
 	fi
-	echo "> 正在下载: ${source_url}"
+	echo "> downloading: ${source_url}"
 	curl -f -o ${CACHE_PATH}/${CLI_NAME} ${source_url} -# &&
-	echo "> 下载成功: ${CACHE_PATH%/*}/${CLI_NAME}"
+	echo "> download success: ${CACHE_PATH%/*}/${CLI_NAME}"
 }
 
 
