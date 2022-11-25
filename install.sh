@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 # 源文件
 P1=$1
@@ -6,7 +6,7 @@ P1=$1
 # 重命名
 P2=$2
 
-function func_install() {
+install() {
 	src=$P1
 	target_dir='/usr/local/bin'
 	target_full_path=''
@@ -27,5 +27,5 @@ function func_install() {
 
 case $P1 in
 	'') printf "\n> \033[31m缺少参数！\033[0m 参数：[源文件(包含文件名)] [安装路径(包含文件名)]\n\n" ;;
-	*) func_install ;;
+	*) install ;;
 esac

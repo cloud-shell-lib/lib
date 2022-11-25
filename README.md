@@ -3,7 +3,7 @@
 这是一个公共库，封装了下载和安装脚本的方法。
 
 ```
-curl -s https://sh.xaox.cc/install | bash -s
+curl -s https://sh.xaox.cc/install | sh -s
 ```
 
 ## 如何使用

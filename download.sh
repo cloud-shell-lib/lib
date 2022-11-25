@@ -1,11 +1,11 @@
-#!/bin/bash
+#!/bin/sh
 
 REPO_NAME=$1
 REPO_BRANCHE=$2
 CLI_NAME=$3
 CACHE_PATH=$4
 
-function func_download() {
+download() {
 	case $CLI_NAME in
 		''|'*') CLI_NAME=${REPO_NAME} ;;
 		*) ;;
@@ -26,5 +26,5 @@ function func_download() {
 
 case $REPO_NAME in
 	'') printf "\n> \033[31m缺少参数！\033[0m 参数：[GitHub仓库名] [分支] [要下载的文件]\n\n" ;;
-	*) func_download ;;
+	*) download ;;
 esac
